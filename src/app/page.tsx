@@ -52,12 +52,15 @@ function Nav() {
         </span>
       </div>
       <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-        <Link href="/demo" className="btn-ghost" style={{ textDecoration: "none" }}>
+        <a href="/dashboard" className="btn-ghost" style={{ textDecoration: "none", cursor: "pointer" }}>
+          Dashboard
+        </a>
+        <a href="/demo" className="btn-ghost" style={{ textDecoration: "none", cursor: "pointer" }}>
           Live Demo
-        </Link>
-        <Link href="/demo" className="btn-primary" style={{ textDecoration: "none", padding: "10px 22px", fontSize: 14 }}>
+        </a>
+        <a href="/demo" className="btn-primary" style={{ textDecoration: "none", padding: "10px 22px", fontSize: 14, cursor: "pointer" }}>
           See It Work →
-        </Link>
+        </a>
       </div>
     </nav>
   );
@@ -90,7 +93,7 @@ function Hero() {
         pointerEvents: "none",
       }} />
 
-      <div className="animate-fade-in" style={{ maxWidth: 800, position: "relative" }}>
+      <div className="animate-fade-in" style={{ maxWidth: 800, position: "relative", zIndex: 10 }}>
         {/* Badge */}
         <div style={{ marginBottom: 24 }}>
           <span className="badge badge-rose">
@@ -116,11 +119,11 @@ function Hero() {
         </p>
 
         {/* CTA */}
-        <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
-          <Link href="/demo" className="btn-primary animate-pulse-glow" style={{ textDecoration: "none", fontSize: 17, padding: "16px 36px" }}>
+        <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap", position: "relative", zIndex: 20 }}>
+          <a href="/demo" className="btn-primary animate-pulse-glow" style={{ textDecoration: "none", fontSize: 17, padding: "16px 36px", cursor: "pointer" }}>
             Watch It Work Live →
-          </Link>
-          <a href="#how-it-works" className="btn-secondary" style={{ textDecoration: "none" }}>
+          </a>
+          <a href="#how-it-works" className="btn-secondary" style={{ textDecoration: "none", cursor: "pointer" }}>
             See the Flow ↓
           </a>
         </div>
@@ -435,7 +438,7 @@ function FinalCTA() {
             <p style={{ color: "rgba(255,255,255,0.8)", fontSize: 17, marginBottom: 32 }}>
               Hit the demo — watch a missed call turn into a captured lead right in front of you.
             </p>
-            <Link
+            <a
               href="/demo"
               style={{
                 display: "inline-flex", alignItems: "center", gap: 8,
@@ -444,10 +447,11 @@ function FinalCTA() {
                 borderRadius: 50, textDecoration: "none",
                 boxShadow: "0 8px 32px rgba(0,0,0,0.3)",
                 transition: "transform 0.2s",
+                cursor: "pointer",
               }}
             >
               Launch Live Demo →
-            </Link>
+            </a>
           </div>
         </div>
       </div>
